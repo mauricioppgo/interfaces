@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    height: 550px;
+    background: #00C9FF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #92FE9D, #00C9FF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    clip-path: polygon(11% 0, 100% 0%, 90% 100%, 0% 100%);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(49, 89, 121);
+    padding-top: 60px;
+    font-weight: bold;
+}
+
+#sec {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+#nombre {
+    font-size: 44px;
+}
+
+.conte {
+    text-align: center;
+}
+
+.conte p {
+    font-weight: bold;
+    font-size: 60px;
+    margin: 1.2em 0;
+}
+
+.conte a {
+    color: white;
+    text-decoration: none;
+    background: rgb(22, 170, 180);
+    padding: 4px 20px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.contenedor .card {
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 30px;
+    text-align: center;
+    transition: all 0.25s;
+    background: rgba(84, 13, 150, 0.178);
+}
+
+.contenedor .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor .card img {
+    width: 330px;
+    height: 220px;
+}
+
+.contenedor .card h4 {
+    font-size: 20px;
+    margin-top: 30px;
+    color: rgb(82, 105, 168);
+}
+
+.contenedor .card p {
+    padding: 2rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+/* Slicebox Style */
+.sb-slider {
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+.sb-slider li {
+    margin: 0;
+    padding: 0;
+    display: none;
+    overflow: hidden;
+}
+
+.sb-slider li>a {
+    outline: none;
+}
+
+.sb-slider li>a img {
+    border: none;
+}
+
+.sb-slider img {
+    max-width: 100%;
+    display: block;
+}
+
+.sb-description {
+    padding: 20px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 1000;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 4px solid #fff;
+    opacity: 0;
+    color: #fff;
+
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -o-transition: all 300ms;
+    -ms-transition: all 300ms;
+    transition: all 300ms;
+}
+
+.sb-slider li.sb-current .sb-description {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    opacity: 1;
+}
+
+.sb-slider li.sb-current .sb-description:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+    filter: alpha(opacity=99);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.sb-perspective {
+    position: relative;
+}
+
+.sb-perspective>div {
+    position: absolute;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.sb-side {
+    margin: 0;
+    display: block;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+/* custom style */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    margin-top: 6rem;
+}
+
+
+.sb-description h3 {
+    font-size: 20px;
+}
+
+.sb-description h3 a {
+    color: #4a3c27;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.nav-arrows {
+    display: none;
+}
+
+.nav-arrows a {
+    width: 42px;
+    height: 42px;
+    background: #000 url(https://tympanus.net/Development/Slicebox/images/nav.png) no-repeat top left;
+    background-size: cover;
+    opacity: 0.6;
+    position: absolute;
+    top: 45%;
+    left: 20px;
+    text-indent: -9000px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 300ms;
+}
+
+.nav-arrows a:first-child {
+    left: auto;
+    right: 20px;
+    background-position: top right;
+}
+
+.nav-arrows a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 800px) {
+
+    .nav-arrows a {
+        width: 32px;
+        height: 32px;
+    }
+
+    .sb-description {
+        height: 30px;
+    }
+
+    .sb-description h3 {
+        margin: 3px;
+    }
+}
+
+#sec2 {
+    background-color: #57585811;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+.contenedorR {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.contenedorR .card {
+    width: 330px;
+    height: 290px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 30px;
+    text-align: center;
+    transition: all 0.25s;
+    background: #fa433641;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+.contenedorR .card:hover {
+    -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contenedorR .card img {
+    width: 330px;
+    height: 220px;
+}
+
+.contenedorR .card h4 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: rgb(82, 105, 168);
+}
